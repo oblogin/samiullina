@@ -2,12 +2,12 @@
 <html class="wide wow-animation smoothscroll scrollTo" lang="ru">
 <head>
     <!-- Site Title-->
-    <title>Страница не найдена</title>
+    <title>{{ page.title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="keywords" content="">
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,37 +30,22 @@
 <body>
 <!-- Page-->
 <div class="page text-center">
-    <!-- Page Content-->
+    {% include header.html %}
+
     <main class="page-content">
-        <div class="one-page">
-    <div class="one-page-header">
-        <!--Navbar Brand-->
-        <div class="rd-navbar-brand"><a href="index.html"><img width='203' height='70' class='img-responsive' src="assets/images/logo.png" alt=''/></a></div>
-    </div>
-    <!-- 404-->
-    <section>
-        <div class="container">
-            <div class="section-110 section-cover row justify-content-center align-items-sm-center">
-                <div class="col-xl-6">
-                    <h2>Страница не найдена</h2>
-                    <div class="text-extra-big text-black-opacity-02 font-accent">404</div>
-                    <p class="offset-top-50">Запрашиваемая страница не может быть найдена - это может быть связано с ошибкой в URL или удалением страницы.</p>
-                    <div class="group offset-top-30"><a class="btn btn-ellipse button-primary" href="/">На главную</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="one-page-footer">
-        <p class="small text-gray">&copy; <span class="copyright-year"></span> Все права защищены. <a class="text-gray" href="/privacy.html">Политика приватности</a></p>
-    </div>
-</div>
-
+        {{content}}
     </main>
+
+    {% include footer.html %}
 </div>
 
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
 <!-- Java script-->
-<script src="assets/js/core.min.js"> </script>
-<script src="assets/js/script.js"> </script>
+<script src="/assets/js/core.min.js"> </script>
+<script src="/assets/js/script.js"> </script>
 
 </body>
+
+
 </html>
