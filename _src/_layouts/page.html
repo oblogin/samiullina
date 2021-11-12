@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="keywords" content="">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
     <!-- Stylesheets-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,22 +30,34 @@
 <body>
 <!-- Page-->
 <div class="page text-center">
+    <!-- Page Head-->
+
     {% include header.html %}
 
+    <section class="breadcrumb-modern context-dark text-lg-left">
+        <div class="section-xs section-md-top-110 section-md-bottom-41">
+            <div class="container">
+                <h1>{{ page.title }}</h1>
+                <ul class="list-inline list-inline-arrows p offset-top-34 offset-md-top-70">
+                    <li class="list-inline-item"><a href="/">Главная</a></li>
+                    <li class="list-inline-item">{{ page.title }}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Contents -->
     <main class="page-content">
-        {{content}}
+        {{ content }}
     </main>
 
     {% include footer.html %}
+
 </div>
 
-<!-- Global Mailform Output-->
-<div class="snackbars" id="form-output-global"></div>
 <!-- Java script-->
 <script src="/assets/js/core.min.js"> </script>
 <script src="/assets/js/script.js"> </script>
 
 </body>
-
-
 </html>
